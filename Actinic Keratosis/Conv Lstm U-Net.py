@@ -2,7 +2,7 @@ from tensorflow.keras.applications.vgg16 import VGG16
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dropout, Conv2DTranspose, BatchNormalization, Activation, Reshape, concatenate
 from tensorflow.keras.models import Model
 
-def Conv_Lstm_Unet(input_size=(256,256,3), dropout_rate=0.6):
+def AKU_net(input_size=(256,256,3), dropout_rate=0.6):
     # Load the VGG-16 model and its pre-trained weights
     vgg16 = VGG16(weights='imagenet', include_top=False, input_shape=input_size)
     vgg16_layers = dict([(layer.name, layer) for layer in vgg16.layers])
